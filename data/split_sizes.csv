@@ -1,0 +1,6 @@
+set,posts
+train,19859
+val,250
+test,6703
+eval,400
+covid,400

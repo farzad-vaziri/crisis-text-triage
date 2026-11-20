@@ -1,0 +1,12 @@
+model,set,n,accuracy,macro_f1,high_risk_recall_top_label,auc_high_risk,alerts_per_true_at_95,recall_at_val_threshold,alerts_per_true_at_val_threshold,brier_raw,brier_calibrated,share_top_label,model_name,train_posts,train_secs,infer_secs_per_1000,cost_gbp_per_1000
+tfidf,eval,400,0.79,0.7875,0.7125,0.9514,2.0395,0.925,1.5541,0.072,0.0679,0.23,TF-IDF + logistic regression,19859.0,8.4,0.201,0.0
+tfidf,covid,400,0.7475,0.746,0.7,0.9176,2.7105,0.8,1.7656,0.0854,0.0839,0.2225,TF-IDF + logistic regression,19859.0,8.4,0.201,0.0
+tfidf,test,6703,0.7689,0.7594,0.7138,0.927,1.9705,0.8826,1.65,0.0924,0.0898,0.2359,TF-IDF + logistic regression,19859.0,8.4,0.201,0.0
+minilm_small,eval,400,0.815,0.8116,0.775,0.9239,2.2895,0.875,1.8429,0.0843,0.0827,0.2125,Fine-tuned MiniLM-L6 (small),4000.0,522.0,12.96,0.0003
+minilm_small,covid,400,0.735,0.7328,0.7625,0.9231,2.0395,0.9,1.9722,0.0899,0.0893,0.2425,Fine-tuned MiniLM-L6 (small),4000.0,522.0,12.96,0.0003
+llm_qwen05,eval,400,0.22,0.1057,0.0,0.7046,4.5526,0.8875,4.0423,0.1973,0.1457,0.9775,Zero-shot Qwen2.5-0.5B-Instruct,0.0,0.0,1543.5,0.0343
+llm_qwen05,covid,400,0.215,0.0964,0.0,0.7083,3.9737,0.875,3.8286,0.1965,0.1445,0.985,Zero-shot Qwen2.5-0.5B-Instruct,0.0,0.0,1543.5,0.0343
+llm_qwen05_cc,eval,400,0.4875,0.4785,0.7,0.7731,4.2237,0.8625,3.6522,0.1417,0.133,0.34,Zero-shot Qwen2.5-0.5B-Instruct + content-free calibration,0.0,0.0,1543.5,0.0343
+llm_qwen05_cc,covid,400,0.455,0.441,0.6375,0.751,3.75,0.8625,3.7391,0.1455,0.1371,0.3575,Zero-shot Qwen2.5-0.5B-Instruct + content-free calibration,0.0,0.0,1543.5,0.0343
+llm_qwen05_bc,eval,400,0.5425,0.5312,0.475,0.7642,4.2105,0.9,3.8194,0.1322,0.1333,0.265,Zero-shot Qwen2.5-0.5B-Instruct + calibrated on 250 validation posts,0.0,0.0,1543.5,0.0343
+llm_qwen05_bc,covid,400,0.505,0.4991,0.4,0.7541,4.3553,0.925,4.027,0.132,0.1347,0.2375,Zero-shot Qwen2.5-0.5B-Instruct + calibrated on 250 validation posts,0.0,0.0,1543.5,0.0343

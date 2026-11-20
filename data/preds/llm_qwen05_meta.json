@@ -1,0 +1,16 @@
+{
+  "name": "Zero-shot Qwen2.5-0.5B-Instruct",
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "train_posts": 0,
+  "train_secs": 0,
+  "infer_secs_per_1000": 1543.5,
+  "system_prompt": "You classify messages sent to a mental-health support service. Answer with exactly one topic from: anxiety, depression, loneliness, relationships, suicidal thoughts.",
+  "label_words": {
+    "anxiety": "anxiety",
+    "depression": "depression",
+    "lonely": "loneliness",
+    "relationships": "relationships",
+    "suicidewatch": "suicidal thoughts"
+  },
+  "hardware": "2 vCPU cloud workspace, no GPU"
+}

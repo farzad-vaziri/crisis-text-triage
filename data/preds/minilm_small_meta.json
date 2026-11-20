@@ -1,0 +1,22 @@
+{
+  "name": "Fine-tuned MiniLM-L6 (small)",
+  "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "train_posts": 4000,
+  "train_secs": 522,
+  "infer_secs_per_1000": 12.96,
+  "epochs_run": 2,
+  "history": [
+    {
+      "epoch": 1,
+      "val_macro_f1": 0.771,
+      "secs": 275
+    },
+    {
+      "epoch": 2,
+      "val_macro_f1": 0.7472,
+      "secs": 522
+    }
+  ],
+  "params": "AdamW lr 5e-05, weight decay 0.01, linear decay, batch 16, max length 128, grad clip 1.0, seed 42",
+  "hardware": "2 vCPU cloud workspace, no GPU"
+}

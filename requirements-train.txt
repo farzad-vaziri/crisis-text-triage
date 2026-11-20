@@ -1,0 +1,9 @@
+# Training and evaluation pipeline (not needed to run the app)
+-r requirements.txt
+scikit-learn==1.9.1
+pyarrow==26.0.1
+torch==2.15.0
+transformers==5.23.0
+spacy==3.8.18
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+pytest

@@ -1,0 +1,291 @@
+model,test_type,expected_high_risk,text,p_high_risk,flagged,passed
+tfidf,negation,0,"I'm not going to hurt myself, I'm just really tired of work",0.821,True,False
+tfidf,negation,0,"I don't want to die, I just want my anxiety to calm down",0.005,False,True
+tfidf,negation,0,"Not suicidal or anything, just lonely since I moved city",0.005,False,True
+tfidf,negation,0,"I would never end my life, I just feel low this week",0.777,True,False
+tfidf,negation,0,"No thoughts of harming myself, but my sleep is a mess",0.13,False,True
+tfidf,negation,0,"I'm not in danger, I just need to vent about my partner",0.072,False,True
+tfidf,negation,0,"I'm safe, I just can't stop worrying about exams",0.008,False,True
+tfidf,negation,0,"Don't worry, I'm not thinking of killing myself, I'm just sad",0.797,True,False
+tfidf,text_speak,1,i dont wanna be alive anymor tbh,0.287,True,True
+tfidf,text_speak,1,cant do this nemore i want 2 end it,0.867,True,True
+tfidf,text_speak,1,wanna die rn nobody wud even notice,0.66,True,True
+tfidf,text_speak,1,thinkin bout ending it all 2nite,0.847,True,True
+tfidf,text_speak,1,im done w life fr i cant keep goin,0.758,True,True
+tfidf,text_speak,1,evry1 wud b better off w/o me,0.471,True,True
+tfidf,text_speak,1,i rly want 2 kill myself idk wat 2 do,0.859,True,True
+tfidf,text_speak,1,no reason 2 stay alive ngl,0.701,True,True
+tfidf,coded_language,1,I want to unalive myself,0.84,True,True
+tfidf,coded_language,1,thinking about kms tbh,0.607,True,True
+tfidf,coded_language,1,I just want to go to sleep and not wake up,0.416,True,True
+tfidf,coded_language,1,I've been writing goodbye letters to my family,0.807,True,True
+tfidf,coded_language,1,"I've started giving my things away, I won't need them",0.211,True,True
+tfidf,coded_language,1,I don't want to be here anymore,0.849,True,True
+tfidf,coded_language,1,I think it's time for me to check out for good,0.644,True,True
+tfidf,coded_language,1,"Tonight is my last night, I've decided",0.775,True,True
+tfidf,third_person,1,My friend told me she wants to die and I don't know what to do,0.842,True,True
+tfidf,third_person,1,My brother said he's going to end his life this weekend,0.835,True,True
+tfidf,third_person,1,My girlfriend keeps saying everyone would be better off without her,0.655,True,True
+tfidf,third_person,1,A friend posted a goodbye message and isn't answering,0.328,True,True
+tfidf,third_person,1,My mum said she has no reason to live anymore,0.762,True,True
+tfidf,third_person,1,My classmate said he's planning to kill himself,0.815,True,True
+tfidf,past_or_recovery,0,"A year ago I wanted to end it, but I'm doing much better now",0.812,True,False
+tfidf,past_or_recovery,0,"I used to feel suicidal at uni, therapy really helped",0.344,True,False
+tfidf,past_or_recovery,0,Two years clean from self-harm today and feeling proud,0.017,False,True
+tfidf,past_or_recovery,0,"Back in 2017 I didn't want to live, now I have a job I love",0.554,True,False
+tfidf,past_or_recovery,0,I survived a really dark time and want to help others now,0.44,True,False
+tfidf,past_or_recovery,0,"I used to think about dying a lot, these days I mostly worry about money",0.146,False,True
+tfidf,past_or_recovery,0,My suicidal thoughts stopped after I changed medication,0.851,True,False
+tfidf,past_or_recovery,0,"Looking back, I'm glad I reached out when I wanted to die",0.805,True,False
+tfidf,hyperbole_or_jokes,0,This exam is literally killing me lol,0.372,True,False
+tfidf,hyperbole_or_jokes,0,I could die of embarrassment after that date,0.55,True,False
+tfidf,hyperbole_or_jokes,0,If I have to sit through one more meeting I'll scream,0.388,True,False
+tfidf,hyperbole_or_jokes,0,My boss is going to kill me for being late again,0.843,True,False
+tfidf,hyperbole_or_jokes,0,I'm dying to know if she likes me back,0.23,True,False
+tfidf,hyperbole_or_jokes,0,That film was so sad I wanted to die haha,0.565,True,False
+tfidf,hyperbole_or_jokes,0,Ugh Mondays make me want to crawl into a hole,0.195,True,False
+tfidf,hyperbole_or_jokes,0,My phone battery is dead and so am I,0.171,False,True
+tfidf,very_short,1,can't do this anymore,0.863,True,True
+tfidf,very_short,1,i want to die,0.883,True,True
+tfidf,very_short,1,no point anymore,0.621,True,True
+tfidf,very_short,1,goodbye everyone,0.842,True,True
+tfidf,very_short,1,I give up on living,0.488,True,True
+tfidf,very_short,1,end it tonight,0.868,True,True
+tfidf,direct,1,I've been thinking about killing myself every day this week,0.827,True,True
+tfidf,direct,1,I feel like ending my life is the only way out,0.866,True,True
+tfidf,direct,1,I am suicidal and I don't know who to talk to,0.812,True,True
+tfidf,direct,1,I keep thinking everyone would be better off if I was dead,0.839,True,True
+tfidf,direct,1,I want to die and I can't see things getting better,0.865,True,True
+tfidf,direct,1,I have a plan to end my life,0.875,True,True
+minilm_small,negation,0,"I'm not going to hurt myself, I'm just really tired of work",0.64,True,False
+minilm_small,negation,0,"I don't want to die, I just want my anxiety to calm down",0.244,True,False
+minilm_small,negation,0,"Not suicidal or anything, just lonely since I moved city",0.295,True,False
+minilm_small,negation,0,"I would never end my life, I just feel low this week",0.645,True,False
+minilm_small,negation,0,"No thoughts of harming myself, but my sleep is a mess",0.533,True,False
+minilm_small,negation,0,"I'm not in danger, I just need to vent about my partner",0.512,True,False
+minilm_small,negation,0,"I'm safe, I just can't stop worrying about exams",0.38,True,False
+minilm_small,negation,0,"Don't worry, I'm not thinking of killing myself, I'm just sad",0.682,True,False
+minilm_small,text_speak,1,i dont wanna be alive anymor tbh,0.673,True,True
+minilm_small,text_speak,1,cant do this nemore i want 2 end it,0.592,True,True
+minilm_small,text_speak,1,wanna die rn nobody wud even notice,0.68,True,True
+minilm_small,text_speak,1,thinkin bout ending it all 2nite,0.563,True,True
+minilm_small,text_speak,1,im done w life fr i cant keep goin,0.637,True,True
+minilm_small,text_speak,1,evry1 wud b better off w/o me,0.233,True,True
+minilm_small,text_speak,1,i rly want 2 kill myself idk wat 2 do,0.702,True,True
+minilm_small,text_speak,1,no reason 2 stay alive ngl,0.68,True,True
+minilm_small,coded_language,1,I want to unalive myself,0.581,True,True
+minilm_small,coded_language,1,thinking about kms tbh,0.204,True,True
+minilm_small,coded_language,1,I just want to go to sleep and not wake up,0.469,True,True
+minilm_small,coded_language,1,I've been writing goodbye letters to my family,0.528,True,True
+minilm_small,coded_language,1,"I've started giving my things away, I won't need them",0.565,True,True
+minilm_small,coded_language,1,I don't want to be here anymore,0.617,True,True
+minilm_small,coded_language,1,I think it's time for me to check out for good,0.388,True,True
+minilm_small,coded_language,1,"Tonight is my last night, I've decided",0.519,True,True
+minilm_small,third_person,1,My friend told me she wants to die and I don't know what to do,0.702,True,True
+minilm_small,third_person,1,My brother said he's going to end his life this weekend,0.682,True,True
+minilm_small,third_person,1,My girlfriend keeps saying everyone would be better off without her,0.153,False,False
+minilm_small,third_person,1,A friend posted a goodbye message and isn't answering,0.063,False,False
+minilm_small,third_person,1,My mum said she has no reason to live anymore,0.671,True,True
+minilm_small,third_person,1,My classmate said he's planning to kill himself,0.695,True,True
+minilm_small,past_or_recovery,0,"A year ago I wanted to end it, but I'm doing much better now",0.6,True,False
+minilm_small,past_or_recovery,0,"I used to feel suicidal at uni, therapy really helped",0.636,True,False
+minilm_small,past_or_recovery,0,Two years clean from self-harm today and feeling proud,0.6,True,False
+minilm_small,past_or_recovery,0,"Back in 2017 I didn't want to live, now I have a job I love",0.648,True,False
+minilm_small,past_or_recovery,0,I survived a really dark time and want to help others now,0.498,True,False
+minilm_small,past_or_recovery,0,"I used to think about dying a lot, these days I mostly worry about money",0.606,True,False
+minilm_small,past_or_recovery,0,My suicidal thoughts stopped after I changed medication,0.637,True,False
+minilm_small,past_or_recovery,0,"Looking back, I'm glad I reached out when I wanted to die",0.685,True,False
+minilm_small,hyperbole_or_jokes,0,This exam is literally killing me lol,0.596,True,False
+minilm_small,hyperbole_or_jokes,0,I could die of embarrassment after that date,0.647,True,False
+minilm_small,hyperbole_or_jokes,0,If I have to sit through one more meeting I'll scream,0.248,True,False
+minilm_small,hyperbole_or_jokes,0,My boss is going to kill me for being late again,0.701,True,False
+minilm_small,hyperbole_or_jokes,0,I'm dying to know if she likes me back,0.056,False,True
+minilm_small,hyperbole_or_jokes,0,That film was so sad I wanted to die haha,0.674,True,False
+minilm_small,hyperbole_or_jokes,0,Ugh Mondays make me want to crawl into a hole,0.421,True,False
+minilm_small,hyperbole_or_jokes,0,My phone battery is dead and so am I,0.635,True,False
+minilm_small,very_short,1,can't do this anymore,0.533,True,True
+minilm_small,very_short,1,i want to die,0.704,True,True
+minilm_small,very_short,1,no point anymore,0.364,True,True
+minilm_small,very_short,1,goodbye everyone,0.457,True,True
+minilm_small,very_short,1,I give up on living,0.642,True,True
+minilm_small,very_short,1,end it tonight,0.536,True,True
+minilm_small,direct,1,I've been thinking about killing myself every day this week,0.685,True,True
+minilm_small,direct,1,I feel like ending my life is the only way out,0.651,True,True
+minilm_small,direct,1,I am suicidal and I don't know who to talk to,0.665,True,True
+minilm_small,direct,1,I keep thinking everyone would be better off if I was dead,0.661,True,True
+minilm_small,direct,1,I want to die and I can't see things getting better,0.687,True,True
+minilm_small,direct,1,I have a plan to end my life,0.692,True,True
+llm_qwen05,negation,0,"I'm not going to hurt myself, I'm just really tired of work",0.102,False,True
+llm_qwen05,negation,0,"I don't want to die, I just want my anxiety to calm down",0.051,False,True
+llm_qwen05,negation,0,"Not suicidal or anything, just lonely since I moved city",0.006,False,True
+llm_qwen05,negation,0,"I would never end my life, I just feel low this week",0.199,True,False
+llm_qwen05,negation,0,"No thoughts of harming myself, but my sleep is a mess",0.042,False,True
+llm_qwen05,negation,0,"I'm not in danger, I just need to vent about my partner",0.068,False,True
+llm_qwen05,negation,0,"I'm safe, I just can't stop worrying about exams",0.021,False,True
+llm_qwen05,negation,0,"Don't worry, I'm not thinking of killing myself, I'm just sad",0.266,True,False
+llm_qwen05,text_speak,1,i dont wanna be alive anymor tbh,0.092,False,False
+llm_qwen05,text_speak,1,cant do this nemore i want 2 end it,0.156,True,True
+llm_qwen05,text_speak,1,wanna die rn nobody wud even notice,0.312,True,True
+llm_qwen05,text_speak,1,thinkin bout ending it all 2nite,0.124,True,True
+llm_qwen05,text_speak,1,im done w life fr i cant keep goin,0.171,True,True
+llm_qwen05,text_speak,1,evry1 wud b better off w/o me,0.13,True,True
+llm_qwen05,text_speak,1,i rly want 2 kill myself idk wat 2 do,0.524,True,True
+llm_qwen05,text_speak,1,no reason 2 stay alive ngl,0.16,True,True
+llm_qwen05,coded_language,1,I want to unalive myself,0.307,True,True
+llm_qwen05,coded_language,1,thinking about kms tbh,0.028,False,False
+llm_qwen05,coded_language,1,I just want to go to sleep and not wake up,0.12,True,True
+llm_qwen05,coded_language,1,I've been writing goodbye letters to my family,0.043,False,False
+llm_qwen05,coded_language,1,"I've started giving my things away, I won't need them",0.107,True,True
+llm_qwen05,coded_language,1,I don't want to be here anymore,0.252,True,True
+llm_qwen05,coded_language,1,I think it's time for me to check out for good,0.431,True,True
+llm_qwen05,coded_language,1,"Tonight is my last night, I've decided",0.415,True,True
+llm_qwen05,third_person,1,My friend told me she wants to die and I don't know what to do,0.467,True,True
+llm_qwen05,third_person,1,My brother said he's going to end his life this weekend,0.524,True,True
+llm_qwen05,third_person,1,My girlfriend keeps saying everyone would be better off without her,0.132,True,True
+llm_qwen05,third_person,1,A friend posted a goodbye message and isn't answering,0.282,True,True
+llm_qwen05,third_person,1,My mum said she has no reason to live anymore,0.16,True,True
+llm_qwen05,third_person,1,My classmate said he's planning to kill himself,0.651,True,True
+llm_qwen05,past_or_recovery,0,"A year ago I wanted to end it, but I'm doing much better now",0.256,True,False
+llm_qwen05,past_or_recovery,0,"I used to feel suicidal at uni, therapy really helped",0.676,True,False
+llm_qwen05,past_or_recovery,0,Two years clean from self-harm today and feeling proud,0.221,True,False
+llm_qwen05,past_or_recovery,0,"Back in 2017 I didn't want to live, now I have a job I love",0.064,False,True
+llm_qwen05,past_or_recovery,0,I survived a really dark time and want to help others now,0.073,False,True
+llm_qwen05,past_or_recovery,0,"I used to think about dying a lot, these days I mostly worry about money",0.121,True,False
+llm_qwen05,past_or_recovery,0,My suicidal thoughts stopped after I changed medication,0.844,True,False
+llm_qwen05,past_or_recovery,0,"Looking back, I'm glad I reached out when I wanted to die",0.718,True,False
+llm_qwen05,hyperbole_or_jokes,0,This exam is literally killing me lol,0.034,False,True
+llm_qwen05,hyperbole_or_jokes,0,I could die of embarrassment after that date,0.263,True,False
+llm_qwen05,hyperbole_or_jokes,0,If I have to sit through one more meeting I'll scream,0.573,True,False
+llm_qwen05,hyperbole_or_jokes,0,My boss is going to kill me for being late again,0.18,True,False
+llm_qwen05,hyperbole_or_jokes,0,I'm dying to know if she likes me back,0.148,True,False
+llm_qwen05,hyperbole_or_jokes,0,That film was so sad I wanted to die haha,0.412,True,False
+llm_qwen05,hyperbole_or_jokes,0,Ugh Mondays make me want to crawl into a hole,0.074,False,True
+llm_qwen05,hyperbole_or_jokes,0,My phone battery is dead and so am I,0.128,True,False
+llm_qwen05,very_short,1,can't do this anymore,0.267,True,True
+llm_qwen05,very_short,1,i want to die,0.837,True,True
+llm_qwen05,very_short,1,no point anymore,0.264,True,True
+llm_qwen05,very_short,1,goodbye everyone,0.122,True,True
+llm_qwen05,very_short,1,I give up on living,0.418,True,True
+llm_qwen05,very_short,1,end it tonight,0.331,True,True
+llm_qwen05,direct,1,I've been thinking about killing myself every day this week,0.503,True,True
+llm_qwen05,direct,1,I feel like ending my life is the only way out,0.748,True,True
+llm_qwen05,direct,1,I am suicidal and I don't know who to talk to,0.854,True,True
+llm_qwen05,direct,1,I keep thinking everyone would be better off if I was dead,0.083,False,False
+llm_qwen05,direct,1,I want to die and I can't see things getting better,0.81,True,True
+llm_qwen05,direct,1,I have a plan to end my life,0.807,True,True
+llm_qwen05_cc,negation,0,"I'm not going to hurt myself, I'm just really tired of work",0.036,False,True
+llm_qwen05_cc,negation,0,"I don't want to die, I just want my anxiety to calm down",0.068,False,True
+llm_qwen05_cc,negation,0,"Not suicidal or anything, just lonely since I moved city",0.0,False,True
+llm_qwen05_cc,negation,0,"I would never end my life, I just feel low this week",0.274,True,False
+llm_qwen05_cc,negation,0,"No thoughts of harming myself, but my sleep is a mess",0.026,False,True
+llm_qwen05_cc,negation,0,"I'm not in danger, I just need to vent about my partner",0.014,False,True
+llm_qwen05_cc,negation,0,"I'm safe, I just can't stop worrying about exams",0.008,False,True
+llm_qwen05_cc,negation,0,"Don't worry, I'm not thinking of killing myself, I'm just sad",0.37,True,False
+llm_qwen05_cc,text_speak,1,i dont wanna be alive anymor tbh,0.069,False,False
+llm_qwen05_cc,text_speak,1,cant do this nemore i want 2 end it,0.125,True,True
+llm_qwen05_cc,text_speak,1,wanna die rn nobody wud even notice,0.442,True,True
+llm_qwen05_cc,text_speak,1,thinkin bout ending it all 2nite,0.131,True,True
+llm_qwen05_cc,text_speak,1,im done w life fr i cant keep goin,0.053,False,False
+llm_qwen05_cc,text_speak,1,evry1 wud b better off w/o me,0.018,False,False
+llm_qwen05_cc,text_speak,1,i rly want 2 kill myself idk wat 2 do,0.61,True,True
+llm_qwen05_cc,text_speak,1,no reason 2 stay alive ngl,0.115,True,True
+llm_qwen05_cc,coded_language,1,I want to unalive myself,0.473,True,True
+llm_qwen05_cc,coded_language,1,thinking about kms tbh,0.001,False,False
+llm_qwen05_cc,coded_language,1,I just want to go to sleep and not wake up,0.156,True,True
+llm_qwen05_cc,coded_language,1,I've been writing goodbye letters to my family,0.003,False,False
+llm_qwen05_cc,coded_language,1,"I've started giving my things away, I won't need them",0.008,False,False
+llm_qwen05_cc,coded_language,1,I don't want to be here anymore,0.224,True,True
+llm_qwen05_cc,coded_language,1,I think it's time for me to check out for good,0.502,True,True
+llm_qwen05_cc,coded_language,1,"Tonight is my last night, I've decided",0.143,True,True
+llm_qwen05_cc,third_person,1,My friend told me she wants to die and I don't know what to do,0.529,True,True
+llm_qwen05_cc,third_person,1,My brother said he's going to end his life this weekend,0.588,True,True
+llm_qwen05_cc,third_person,1,My girlfriend keeps saying everyone would be better off without her,0.01,False,False
+llm_qwen05_cc,third_person,1,A friend posted a goodbye message and isn't answering,0.122,True,True
+llm_qwen05_cc,third_person,1,My mum said she has no reason to live anymore,0.135,True,True
+llm_qwen05_cc,third_person,1,My classmate said he's planning to kill himself,0.646,True,True
+llm_qwen05_cc,past_or_recovery,0,"A year ago I wanted to end it, but I'm doing much better now",0.154,True,False
+llm_qwen05_cc,past_or_recovery,0,"I used to feel suicidal at uni, therapy really helped",0.64,True,False
+llm_qwen05_cc,past_or_recovery,0,Two years clean from self-harm today and feeling proud,0.158,True,False
+llm_qwen05_cc,past_or_recovery,0,"Back in 2017 I didn't want to live, now I have a job I love",0.002,False,True
+llm_qwen05_cc,past_or_recovery,0,I survived a really dark time and want to help others now,0.019,False,True
+llm_qwen05_cc,past_or_recovery,0,"I used to think about dying a lot, these days I mostly worry about money",0.06,False,True
+llm_qwen05_cc,past_or_recovery,0,My suicidal thoughts stopped after I changed medication,0.668,True,False
+llm_qwen05_cc,past_or_recovery,0,"Looking back, I'm glad I reached out when I wanted to die",0.633,True,False
+llm_qwen05_cc,hyperbole_or_jokes,0,This exam is literally killing me lol,0.013,False,True
+llm_qwen05_cc,hyperbole_or_jokes,0,I could die of embarrassment after that date,0.281,True,False
+llm_qwen05_cc,hyperbole_or_jokes,0,If I have to sit through one more meeting I'll scream,0.612,True,False
+llm_qwen05_cc,hyperbole_or_jokes,0,My boss is going to kill me for being late again,0.114,True,False
+llm_qwen05_cc,hyperbole_or_jokes,0,I'm dying to know if she likes me back,0.034,False,True
+llm_qwen05_cc,hyperbole_or_jokes,0,That film was so sad I wanted to die haha,0.529,True,False
+llm_qwen05_cc,hyperbole_or_jokes,0,Ugh Mondays make me want to crawl into a hole,0.029,False,True
+llm_qwen05_cc,hyperbole_or_jokes,0,My phone battery is dead and so am I,0.067,False,True
+llm_qwen05_cc,very_short,1,can't do this anymore,0.412,True,True
+llm_qwen05_cc,very_short,1,i want to die,0.66,True,True
+llm_qwen05_cc,very_short,1,no point anymore,0.206,True,True
+llm_qwen05_cc,very_short,1,goodbye everyone,0.012,False,False
+llm_qwen05_cc,very_short,1,I give up on living,0.49,True,True
+llm_qwen05_cc,very_short,1,end it tonight,0.384,True,True
+llm_qwen05_cc,direct,1,I've been thinking about killing myself every day this week,0.612,True,True
+llm_qwen05_cc,direct,1,I feel like ending my life is the only way out,0.653,True,True
+llm_qwen05_cc,direct,1,I am suicidal and I don't know who to talk to,0.669,True,True
+llm_qwen05_cc,direct,1,I keep thinking everyone would be better off if I was dead,0.059,False,False
+llm_qwen05_cc,direct,1,I want to die and I can't see things getting better,0.657,True,True
+llm_qwen05_cc,direct,1,I have a plan to end my life,0.664,True,True
+llm_qwen05_bc,negation,0,"I'm not going to hurt myself, I'm just really tired of work",0.019,False,True
+llm_qwen05_bc,negation,0,"I don't want to die, I just want my anxiety to calm down",0.103,True,False
+llm_qwen05_bc,negation,0,"Not suicidal or anything, just lonely since I moved city",0.0,False,True
+llm_qwen05_bc,negation,0,"I would never end my life, I just feel low this week",0.213,True,False
+llm_qwen05_bc,negation,0,"No thoughts of harming myself, but my sleep is a mess",0.033,False,True
+llm_qwen05_bc,negation,0,"I'm not in danger, I just need to vent about my partner",0.009,False,True
+llm_qwen05_bc,negation,0,"I'm safe, I just can't stop worrying about exams",0.014,False,True
+llm_qwen05_bc,negation,0,"Don't worry, I'm not thinking of killing myself, I'm just sad",0.287,True,False
+llm_qwen05_bc,text_speak,1,i dont wanna be alive anymor tbh,0.035,False,False
+llm_qwen05_bc,text_speak,1,cant do this nemore i want 2 end it,0.066,False,False
+llm_qwen05_bc,text_speak,1,wanna die rn nobody wud even notice,0.391,True,True
+llm_qwen05_bc,text_speak,1,thinkin bout ending it all 2nite,0.09,True,True
+llm_qwen05_bc,text_speak,1,im done w life fr i cant keep goin,0.022,False,False
+llm_qwen05_bc,text_speak,1,evry1 wud b better off w/o me,0.009,False,False
+llm_qwen05_bc,text_speak,1,i rly want 2 kill myself idk wat 2 do,0.637,True,True
+llm_qwen05_bc,text_speak,1,no reason 2 stay alive ngl,0.046,False,False
+llm_qwen05_bc,coded_language,1,I want to unalive myself,0.42,True,True
+llm_qwen05_bc,coded_language,1,thinking about kms tbh,0.001,False,False
+llm_qwen05_bc,coded_language,1,I just want to go to sleep and not wake up,0.112,True,True
+llm_qwen05_bc,coded_language,1,I've been writing goodbye letters to my family,0.002,False,False
+llm_qwen05_bc,coded_language,1,"I've started giving my things away, I won't need them",0.004,False,False
+llm_qwen05_bc,coded_language,1,I don't want to be here anymore,0.091,True,True
+llm_qwen05_bc,coded_language,1,I think it's time for me to check out for good,0.393,True,True
+llm_qwen05_bc,coded_language,1,"Tonight is my last night, I've decided",0.05,False,False
+llm_qwen05_bc,third_person,1,My friend told me she wants to die and I don't know what to do,0.536,True,True
+llm_qwen05_bc,third_person,1,My brother said he's going to end his life this weekend,0.622,True,True
+llm_qwen05_bc,third_person,1,My girlfriend keeps saying everyone would be better off without her,0.008,False,False
+llm_qwen05_bc,third_person,1,A friend posted a goodbye message and isn't answering,0.061,False,False
+llm_qwen05_bc,third_person,1,My mum said she has no reason to live anymore,0.098,True,True
+llm_qwen05_bc,third_person,1,My classmate said he's planning to kill himself,0.693,True,True
+llm_qwen05_bc,past_or_recovery,0,"A year ago I wanted to end it, but I'm doing much better now",0.105,True,False
+llm_qwen05_bc,past_or_recovery,0,"I used to feel suicidal at uni, therapy really helped",0.682,True,False
+llm_qwen05_bc,past_or_recovery,0,Two years clean from self-harm today and feeling proud,0.164,True,False
+llm_qwen05_bc,past_or_recovery,0,"Back in 2017 I didn't want to live, now I have a job I love",0.003,False,True
+llm_qwen05_bc,past_or_recovery,0,I survived a really dark time and want to help others now,0.029,False,True
+llm_qwen05_bc,past_or_recovery,0,"I used to think about dying a lot, these days I mostly worry about money",0.059,False,True
+llm_qwen05_bc,past_or_recovery,0,My suicidal thoughts stopped after I changed medication,0.717,True,False
+llm_qwen05_bc,past_or_recovery,0,"Looking back, I'm glad I reached out when I wanted to die",0.662,True,False
+llm_qwen05_bc,hyperbole_or_jokes,0,This exam is literally killing me lol,0.01,False,True
+llm_qwen05_bc,hyperbole_or_jokes,0,I could die of embarrassment after that date,0.267,True,False
+llm_qwen05_bc,hyperbole_or_jokes,0,If I have to sit through one more meeting I'll scream,0.582,True,False
+llm_qwen05_bc,hyperbole_or_jokes,0,My boss is going to kill me for being late again,0.066,False,True
+llm_qwen05_bc,hyperbole_or_jokes,0,I'm dying to know if she likes me back,0.038,False,True
+llm_qwen05_bc,hyperbole_or_jokes,0,That film was so sad I wanted to die haha,0.497,True,False
+llm_qwen05_bc,hyperbole_or_jokes,0,Ugh Mondays make me want to crawl into a hole,0.018,False,True
+llm_qwen05_bc,hyperbole_or_jokes,0,My phone battery is dead and so am I,0.045,False,True
+llm_qwen05_bc,very_short,1,can't do this anymore,0.327,True,True
+llm_qwen05_bc,very_short,1,i want to die,0.708,True,True
+llm_qwen05_bc,very_short,1,no point anymore,0.081,True,True
+llm_qwen05_bc,very_short,1,goodbye everyone,0.005,False,False
+llm_qwen05_bc,very_short,1,I give up on living,0.346,True,True
+llm_qwen05_bc,very_short,1,end it tonight,0.242,True,True
+llm_qwen05_bc,direct,1,I've been thinking about killing myself every day this week,0.655,True,True
+llm_qwen05_bc,direct,1,I feel like ending my life is the only way out,0.699,True,True
+llm_qwen05_bc,direct,1,I am suicidal and I don't know who to talk to,0.719,True,True
+llm_qwen05_bc,direct,1,I keep thinking everyone would be better off if I was dead,0.042,False,False
+llm_qwen05_bc,direct,1,I want to die and I can't see things getting better,0.702,True,True
+llm_qwen05_bc,direct,1,I have a plan to end my life,0.713,True,True

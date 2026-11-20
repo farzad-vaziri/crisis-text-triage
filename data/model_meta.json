@@ -1,0 +1,88 @@
+{
+  "tfidf": {
+    "name": "TF-IDF + logistic regression",
+    "train_posts": 19859,
+    "train_secs": 8.4,
+    "infer_secs_per_1000": 0.201,
+    "C_grid": {
+      "0.5": 0.7487,
+      "1": 0.7518,
+      "2": 0.7621,
+      "4": 0.751,
+      "8": 0.7613
+    },
+    "C": 2,
+    "hardware": "2 vCPU cloud workspace, no GPU",
+    "params": "1-2 grams, min_df 3, sublinear tf, 100k features, balanced classes"
+  },
+  "minilm_small": {
+    "name": "Fine-tuned MiniLM-L6 (small)",
+    "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "train_posts": 4000,
+    "train_secs": 522,
+    "infer_secs_per_1000": 12.96,
+    "epochs_run": 2,
+    "history": [
+      {
+        "epoch": 1,
+        "val_macro_f1": 0.771,
+        "secs": 275
+      },
+      {
+        "epoch": 2,
+        "val_macro_f1": 0.7472,
+        "secs": 522
+      }
+    ],
+    "params": "AdamW lr 5e-05, weight decay 0.01, linear decay, batch 16, max length 128, grad clip 1.0, seed 42",
+    "hardware": "2 vCPU cloud workspace, no GPU"
+  },
+  "llm_qwen05": {
+    "name": "Zero-shot Qwen2.5-0.5B-Instruct",
+    "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "train_posts": 0,
+    "train_secs": 0,
+    "infer_secs_per_1000": 1543.5,
+    "system_prompt": "You classify messages sent to a mental-health support service. Answer with exactly one topic from: anxiety, depression, loneliness, relationships, suicidal thoughts.",
+    "label_words": {
+      "anxiety": "anxiety",
+      "depression": "depression",
+      "lonely": "loneliness",
+      "relationships": "relationships",
+      "suicidewatch": "suicidal thoughts"
+    },
+    "hardware": "2 vCPU cloud workspace, no GPU"
+  },
+  "llm_qwen05_cc": {
+    "name": "Zero-shot Qwen2.5-0.5B-Instruct + content-free calibration",
+    "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "train_posts": 0,
+    "train_secs": 0,
+    "infer_secs_per_1000": 1543.5,
+    "system_prompt": "You classify messages sent to a mental-health support service. Answer with exactly one topic from: anxiety, depression, loneliness, relationships, suicidal thoughts.",
+    "label_words": {
+      "anxiety": "anxiety",
+      "depression": "depression",
+      "lonely": "loneliness",
+      "relationships": "relationships",
+      "suicidewatch": "suicidal thoughts"
+    },
+    "hardware": "2 vCPU cloud workspace, no GPU"
+  },
+  "llm_qwen05_bc": {
+    "name": "Zero-shot Qwen2.5-0.5B-Instruct + calibrated on 250 validation posts",
+    "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "train_posts": 0,
+    "train_secs": 0,
+    "infer_secs_per_1000": 1543.5,
+    "system_prompt": "You classify messages sent to a mental-health support service. Answer with exactly one topic from: anxiety, depression, loneliness, relationships, suicidal thoughts.",
+    "label_words": {
+      "anxiety": "anxiety",
+      "depression": "depression",
+      "lonely": "loneliness",
+      "relationships": "relationships",
+      "suicidewatch": "suicidal thoughts"
+    },
+    "hardware": "2 vCPU cloud workspace, no GPU"
+  }
+}

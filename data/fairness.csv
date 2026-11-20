@@ -1,0 +1,61 @@
+model,set,variable,group,n_high_risk,recall,ci_lo,ci_hi,overall_recall,flag
+tfidf,test,length_group,shortest 25%,488,0.873,0.8443,0.9037,0.8826,False
+tfidf,test,length_group,short-mid,394,0.9036,0.8731,0.9289,0.8826,False
+tfidf,test,length_group,mid-long,359,0.9053,0.8718,0.9359,0.8826,False
+tfidf,test,length_group,longest 25%,258,0.8372,0.7868,0.8798,0.8826,True
+tfidf,test,reading_group,harder to read (<50),92,0.8587,0.7826,0.9239,0.8826,False
+tfidf,test,reading_group,standard (50-70),286,0.8566,0.8147,0.8951,0.8826,False
+tfidf,test,reading_group,easy to read (>70),1121,0.8912,0.8733,0.9081,0.8826,False
+tfidf,test,slang_group,no text-speak,1049,0.8799,0.8589,0.899,0.8826,False
+tfidf,test,slang_group,some (≤2%),292,0.8664,0.8219,0.9041,0.8826,False
+tfidf,test,slang_group,frequent (>2%),158,0.9304,0.8924,0.9622,0.8826,False
+tfidf,eval,length_group,shortest 25%,21,0.8571,0.7143,1.0,0.925,False
+tfidf,eval,length_group,short-mid,25,0.96,0.88,1.0,0.925,False
+tfidf,eval,length_group,mid-long,21,0.9524,0.8571,1.0,0.925,False
+tfidf,eval,length_group,longest 25%,13,0.9231,0.7692,1.0,0.925,False
+tfidf,eval,reading_group,harder to read (<50),8,0.875,0.625,1.0,0.925,False
+tfidf,eval,reading_group,standard (50-70),8,1.0,1.0,1.0,0.925,False
+tfidf,eval,reading_group,easy to read (>70),64,0.9219,0.8438,0.9844,0.925,False
+tfidf,eval,slang_group,no text-speak,54,0.9074,0.8333,0.9815,0.925,False
+tfidf,eval,slang_group,some (≤2%),17,0.9412,0.8235,1.0,0.925,False
+tfidf,eval,slang_group,frequent (>2%),9,1.0,1.0,1.0,0.925,False
+minilm_small,eval,length_group,shortest 25%,21,0.9048,0.7619,1.0,0.875,False
+minilm_small,eval,length_group,short-mid,25,0.88,0.72,1.0,0.875,False
+minilm_small,eval,length_group,mid-long,21,0.9048,0.7619,1.0,0.875,False
+minilm_small,eval,length_group,longest 25%,13,0.7692,0.5385,1.0,0.875,False
+minilm_small,eval,reading_group,harder to read (<50),8,1.0,1.0,1.0,0.875,False
+minilm_small,eval,reading_group,standard (50-70),8,0.875,0.625,1.0,0.875,False
+minilm_small,eval,reading_group,easy to read (>70),64,0.8594,0.7656,0.9375,0.875,False
+minilm_small,eval,slang_group,no text-speak,54,0.8704,0.7778,0.9444,0.875,False
+minilm_small,eval,slang_group,some (≤2%),17,0.8824,0.7059,1.0,0.875,False
+minilm_small,eval,slang_group,frequent (>2%),9,0.8889,0.6667,1.0,0.875,False
+llm_qwen05,eval,length_group,shortest 25%,21,0.8571,0.7143,1.0,0.8875,False
+llm_qwen05,eval,length_group,short-mid,25,0.92,0.8,1.0,0.8875,False
+llm_qwen05,eval,length_group,mid-long,21,0.9048,0.7619,1.0,0.8875,False
+llm_qwen05,eval,length_group,longest 25%,13,0.8462,0.6154,1.0,0.8875,False
+llm_qwen05,eval,reading_group,harder to read (<50),8,0.875,0.625,1.0,0.8875,False
+llm_qwen05,eval,reading_group,standard (50-70),8,0.75,0.4969,1.0,0.8875,False
+llm_qwen05,eval,reading_group,easy to read (>70),64,0.9062,0.8281,0.9688,0.8875,False
+llm_qwen05,eval,slang_group,no text-speak,54,0.8704,0.7778,0.963,0.8875,False
+llm_qwen05,eval,slang_group,some (≤2%),17,0.9412,0.8235,1.0,0.8875,False
+llm_qwen05,eval,slang_group,frequent (>2%),9,0.8889,0.6667,1.0,0.8875,False
+llm_qwen05_cc,eval,length_group,shortest 25%,21,0.8571,0.7143,1.0,0.8625,False
+llm_qwen05_cc,eval,length_group,short-mid,25,0.88,0.76,1.0,0.8625,False
+llm_qwen05_cc,eval,length_group,mid-long,21,0.9048,0.7619,1.0,0.8625,False
+llm_qwen05_cc,eval,length_group,longest 25%,13,0.7692,0.5385,1.0,0.8625,False
+llm_qwen05_cc,eval,reading_group,harder to read (<50),8,0.875,0.625,1.0,0.8625,False
+llm_qwen05_cc,eval,reading_group,standard (50-70),8,0.75,0.375,1.0,0.8625,False
+llm_qwen05_cc,eval,reading_group,easy to read (>70),64,0.875,0.7969,0.9531,0.8625,False
+llm_qwen05_cc,eval,slang_group,no text-speak,54,0.8333,0.7222,0.9259,0.8625,False
+llm_qwen05_cc,eval,slang_group,some (≤2%),17,0.9412,0.8235,1.0,0.8625,False
+llm_qwen05_cc,eval,slang_group,frequent (>2%),9,0.8889,0.6667,1.0,0.8625,False
+llm_qwen05_bc,eval,length_group,shortest 25%,21,0.8571,0.7131,1.0,0.9,False
+llm_qwen05_bc,eval,length_group,short-mid,25,0.92,0.8,1.0,0.9,False
+llm_qwen05_bc,eval,length_group,mid-long,21,0.9524,0.8571,1.0,0.9,False
+llm_qwen05_bc,eval,length_group,longest 25%,13,0.8462,0.6154,1.0,0.9,False
+llm_qwen05_bc,eval,reading_group,harder to read (<50),8,1.0,1.0,1.0,0.9,False
+llm_qwen05_bc,eval,reading_group,standard (50-70),8,0.875,0.625,1.0,0.9,False
+llm_qwen05_bc,eval,reading_group,easy to read (>70),64,0.8906,0.8125,0.9531,0.9,False
+llm_qwen05_bc,eval,slang_group,no text-speak,54,0.8704,0.7778,0.9444,0.9,False
+llm_qwen05_bc,eval,slang_group,some (≤2%),17,1.0,1.0,1.0,0.9,False
+llm_qwen05_bc,eval,slang_group,frequent (>2%),9,0.8889,0.6667,1.0,0.9,False

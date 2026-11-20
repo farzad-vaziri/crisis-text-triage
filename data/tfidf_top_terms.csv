@@ -1,0 +1,76 @@
+class,rank,term,weight
+anxiety,1,anxiety,20.944
+anxiety,2,anxious,10.247
+anxiety,3,my anxiety,7.277
+anxiety,4,panic,6.123
+anxiety,5,attack,4.142
+anxiety,6,fear,3.357
+anxiety,7,nervous,3.143
+anxiety,8,attacks,2.79
+anxiety,9,gad,2.776
+anxiety,10,anxiety and,2.755
+anxiety,11,scared,2.699
+anxiety,12,worry,2.683
+anxiety,13,have anxiety,2.665
+anxiety,14,panic attack,2.636
+anxiety,15,worrying,2.568
+depression,1,depression,13.715
+depression,2,depressed,7.908
+depression,3,my depression,3.853
+depression,4,bed,3.164
+depression,5,with depression,2.937
+depression,6,depressive,2.567
+depression,7,antidepressants,2.41
+depression,8,cry,2.393
+depression,9,myself,2.256
+depression,10,shit,2.249
+depression,11,meds,2.134
+depression,12,feel,2.118
+depression,13,motivation,2.035
+depression,14,happy,2.027
+depression,15,self,1.96
+lonely,1,lonely,14.003
+lonely,2,loneliness,7.304
+lonely,3,friends,6.652
+lonely,4,alone,6.067
+lonely,5,people,3.939
+lonely,6,someone,2.705
+lonely,7,friend,2.69
+lonely,8,discord,2.648
+lonely,9,no one,2.566
+lonely,10,chat,2.406
+lonely,11,being alone,2.396
+lonely,12,talk,2.251
+lonely,13,nice,2.203
+lonely,14,isolated,2.137
+lonely,15,message,2.125
+relationships,1,tl,11.458
+relationships,2,tl dr,11.446
+relationships,3,dr,11.238
+relationships,4,tldr,6.283
+relationships,5,relationship,6.008
+relationships,6,we,5.317
+relationships,7,her,5.243
+relationships,8,he,5.158
+relationships,9,him,4.589
+relationships,10,she,4.347
+relationships,11,should,3.772
+relationships,12,our,3.471
+relationships,13,dating,3.382
+relationships,14,boyfriend,3.238
+relationships,15,sex,3.037
+suicidewatch,1,suicide,8.72
+suicidewatch,2,suicidal,6.693
+suicidewatch,3,kill,5.77
+suicidewatch,4,die,5.207
+suicidewatch,5,to die,4.399
+suicidewatch,6,do it,3.989
+suicidewatch,7,anymore,3.756
+suicidewatch,8,life,3.581
+suicidewatch,9,end it,3.495
+suicidewatch,10,to end,3.453
+suicidewatch,11,fucking,3.337
+suicidewatch,12,kill myself,3.28
+suicidewatch,13,myself,3.243
+suicidewatch,14,killing,3.118
+suicidewatch,15,killing myself,3.077
