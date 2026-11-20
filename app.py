@@ -49,7 +49,8 @@ LAYOUT = dict(template="plotly_white", font=dict(family="Inter, Segoe UI, sans-s
 
 
 @st.cache_data
-def load():
+def load(stamp: str):
+    """Cached by a fingerprint of the data files, so a new push refreshes the cache."""
     d = {n: pd.read_csv(DATA / f"{n}.csv") for n in
          ["metrics", "confusion", "risk_curves", "reliability", "human_band", "safety_results",
           "fairness", "privacy_counts", "split_sizes", "thresholds"]}
@@ -57,7 +58,7 @@ def load():
     return d
 
 
-D = load()
+D = load("|".join(f"{p.name}:{p.stat().st_size}" for p in sorted(DATA.glob("*.csv"))))
 M = D["metrics"]
 available = [k for k in SHORT if k in set(M.model)]
 
