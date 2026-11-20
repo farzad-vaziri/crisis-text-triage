@@ -114,7 +114,7 @@ kpis = [(f"{best_f1.macro_f1:.2f}", f"Best macro F1 · {SHORT[best_f1.model]}"),
         (f"{op.flagged_share / max(op.flagged_share - op.false_alarm_share, 1e-9):.1f}",
          "Alerts per true high-risk message"),
         (f"{op.miss_share * 1000:.0f}", "Missed high-risk per 1,000 messages"),
-        (f"{Ms.set_index('model').loc[rec_model, 'cost_gbp_per_1000'] * 100:.4f}p", "Compute cost per 1,000 messages (indicative)")]
+        (f"{Ms.set_index('model').loc[rec_model, 'infer_secs_per_1000'] / 3600 * 0.08 * 100:.2g}p", "Compute cost per 1,000 messages (indicative)")]
 for c, (v, l) in zip(cols, kpis):
     c.markdown(f"<div class='kpi'><div class='v'>{v}</div><div class='l'>{l}</div></div>", unsafe_allow_html=True)
 st.caption("The KPI model is the one with the lowest expected cost at your sidebar settings. In the evaluation sets 20% of posts are high-risk.")
@@ -130,7 +130,7 @@ for _, r in Ms.iterrows():
                              hovertemplate=f"<b>{SHORT[r.model]}</b><br>Macro F1 %{{y:.3f}}<br>%{{x:.2f}} s per 1,000 messages"
                                            f"<br>Training: {r.train_secs:.0f} s on {int(r.train_posts):,} posts<extra></extra>"))
 fig.update_layout(**LAYOUT, height=380, showlegend=False)
-fig.update_xaxes(type="log", title="Inference time per 1,000 messages, seconds (log scale, 2-vCPU machine)")
+fig.update_xaxes(type="log", title="Seconds per 1,000 messages (log scale)")
 fig.update_yaxes(title="Macro F1 (5 topics)", range=[0, 1])
 st.plotly_chart(fig, width="stretch")
 tbl = Ms[["model", "accuracy", "macro_f1", "auc_high_risk", "alerts_per_true_at_95", "train_posts", "train_secs", "infer_secs_per_1000"]].copy()
@@ -151,6 +151,14 @@ elif len(simple):
         o = others.loc[others.macro_f1.idxmax()]
         msg += f", ahead of {SHORT[o.model]} ({o.macro_f1:.2f}), and about {o.infer_secs_per_1000 / max(s.infer_secs_per_1000, 1e-6):,.0f}× cheaper to run."
     take(msg)
+
+full = M[(M.set == "test") & M.model.isin(["tfidf", "minilm_large"])].set_index("model")
+if len(full) == 2:
+    a, b = full.loc["tfidf"], full.loc["minilm_large"]
+    st.markdown(f"<span class='small'><b>Check on the full 2019 test set ({int(a.n):,} posts):</b> TF-IDF accuracy {a.accuracy:.3f} vs "
+                f"fine-tuned MiniLM (10k posts) {b.accuracy:.3f}; at 95% high-risk recall, {a.alerts_per_true_at_95:.2f} vs "
+                f"{b.alerts_per_true_at_95:.2f} alerts per true case. On 400 posts a 2-point gap is within noise; on 6,700 it disappears.</span>",
+                unsafe_allow_html=True)
 
 # ---------------- Panel 2: confusion ----------------
 st.subheader("2 · Where the models get confused")

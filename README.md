@@ -1,6 +1,8 @@
 # Crisis text triage: simple vs complex models
 
-**Live app:** https://crisis-text-triage.streamlit.app *(being deployed)*
+**Live app:** https://crisis-text-triage.streamlit.app
+
+![Crisis text triage app](preview.png)
 
 Which model should sort messages to a mental-health support service by topic and risk? This project compares a **simple TF-IDF model**, a **transformer fine-tuned in PyTorch** and a **zero-shot LLM** on the same real posts. It looks at accuracy, missed high-risk messages, cost, calibration, safety tests, drift and fairness, and ends with which one I'd deploy and why.
 
@@ -14,11 +16,14 @@ Same 400 held-out 2019 posts for every model (80 per topic). Trained and run on 
 |---|---|---|---|---|---|---|
 | TF-IDF + logistic regression | 0.790 | 0.788 | **0.951** | **2.04** | 8 s, 19,859 posts | **0.2** |
 | Fine-tuned MiniLM-L6, PyTorch (4k posts) | **0.815** | **0.812** | 0.924 | 2.29 | 522 s, 4,000 posts | 13 |
+| Fine-tuned MiniLM-L6, PyTorch (10k posts, early stopping) | **0.815** | 0.810 | 0.936 | 2.50 | 1,798 s, 10,000 posts | 12 |
 | Zero-shot Qwen2.5-0.5B, raw | 0.220 | 0.106 | 0.705 | 4.55 | none | 1,544 |
 | Zero-shot Qwen2.5-0.5B + contextual calibration (content-free) | 0.488 | 0.478 | 0.773 | 4.22 | none | 1,544 |
 | Zero-shot Qwen2.5-0.5B + calibration on 250 validation posts | 0.542 | 0.531 | 0.764 | 4.21 | none | 1,544 |
 
-**What I'd deploy:** TF-IDF + calibrated logistic regression as a first-line screen, with a cost-based alert threshold and human review of low-confidence messages. The transformer is slightly better at telling topics apart, but worse at the job that matters most, ranking high-risk messages (more alerts per true case at the same recall), and it is about 60× slower. The zero-shot LLM is not fit for triage: raw, it put 98% of posts into one label. Calibration lifts it a lot, but it stays far behind the trained models. Its value lies elsewhere (summaries, drafting, labelling help), and only once validated against clinicians.
+**Check on the full 2019 test set (6,703 posts):** TF-IDF accuracy 0.769 vs the 10k-post transformer 0.768; at 95% high-risk recall, 1.97 vs 2.06 alerts per true case. The transformer's 2-point lead on the 400-post set is within noise.
+
+**What I'd deploy:** TF-IDF + calibrated logistic regression as a first-line screen, with a cost-based alert threshold and human review of low-confidence messages. The transformer ties it on accuracy over 6,700 posts, is no better at the job that matters most (ranking high-risk messages), and is about 60× slower. The zero-shot LLM is not fit for triage: raw, it put 98% of posts into one label. Calibration lifts it a lot, but it stays far behind the trained models. Its value lies elsewhere (summaries, drafting, labelling help), and only once validated against clinicians.
 
 **Known weakness:** in the safety tests every model catches the direct, short, coded and text-speak messages. They over-flag negations ("I'm not going to hurt myself…"), recovery stories and jokes. That's fine for a screen a person checks, and not fine for anything automatic.
 
@@ -56,7 +61,7 @@ Full details and the limits: [MODEL_CARD.md](MODEL_CARD.md). Original spec: [SPE
 ## Reproduce
 ```bash
 pip install -r requirements-train.txt
-bash scripts/run_all.sh            # download → redact → train 3 models → evaluate (about 75 min on 2 CPUs)
+bash scripts/run_all.sh            # download → redact → train 3 models → evaluate (about 90 min on 2 CPUs)
 pytest -q
 ```
 Steps: `download.py` → `prepare.py` (sampling, redaction, splits) → `train_tfidf.py` → `train_transformer.py small|large` → `zeroshot_llm.py` → `evaluate.py`. Seeds are fixed (42). Model weights go to `models/` (git-ignored) and are **not published**; see the model card for why.
@@ -67,6 +72,9 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 The app reads only the small precomputed CSVs in `data/`; no model runs at page load.
+
+## Screenshots
+See [`screenshots/`](screenshots/): five desktop sections and the phone layout.
 
 ## Design choices
 - **No box to type a message.** Someone in distress could use it and get a meaningless score.

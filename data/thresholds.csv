@@ -1,6 +1,7 @@
 model,val_threshold_90_recall
 tfidf,0.1868
 minilm_small,0.1764
+minilm_large,0.1126
 llm_qwen05,0.1045
 llm_qwen05_cc,0.0922
 llm_qwen05_bc,0.0705
